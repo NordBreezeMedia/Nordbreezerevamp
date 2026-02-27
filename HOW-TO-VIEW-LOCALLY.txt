@@ -1,0 +1,36 @@
+Why "open from file" might not show the website
+===============================================
+
+It used to work when you double-clicked index.html. It can stop working for a few reasons:
+
+1. OPENING THE WRONG FOLDER
+   You must open the file from THIS folder:
+     C:\Users\Bnant\Desktop\Nord Breeze Digital WEBSITE
+   If you open index.html from a different folder (or a copy), the page can't find styles.css, script.js, or the logo — so you get a blank or broken page.
+
+2. HOW TO OPEN IT FROM YOUR FILES (so it works)
+   • Open File Explorer.
+   • Go to: Desktop → "Nord Breeze Digital WEBSITE".
+   • Double-click "index.html" (don’t open a shortcut or a file from somewhere else).
+   The address bar should look like: file:///C:/Users/Bnant/Desktop/Nord%20Breeze%20Digital%20WEBSITE/index.html
+
+3. BROWSER BLOCKING LOCAL FILES
+   Some browsers (especially Chrome) can block loading other files (CSS, JS, images) when you open a page from your computer. If you see a mostly blank page or no styling:
+   • Try another browser: right-click index.html → Open with → Microsoft Edge (or Firefox).
+   • Or use the local server (see below) — that always works.
+
+4. THIS FOLDER NOW HAS INLINE STYLES
+   So even if the external stylesheet doesn’t load, you should at least see:
+   - A light blue/teal background
+   - A white bar at the top with the logo
+   - "Transform Your Digital Presence" and the main content
+   If you see that, the page is loading; the rest of the design may need the full CSS (use the server).
+
+BEST WAY TO PREVIEW (always looks like the live site)
+====================================================
+1. Double-click "Start-Server.bat" in this folder.
+2. In your browser go to:  http://localhost:8080
+
+Requires Python (usually already on Windows). If the batch file fails, open
+Command Prompt in this folder and run:  python -m http.server 8080
+Then visit http://localhost:8080

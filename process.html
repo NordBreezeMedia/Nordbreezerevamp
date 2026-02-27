@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process - Nord Breeze Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="NORDBREEZEMEDIA.png">
+    <style>
+        .process-hero {
+            background: transparent;
+            padding: 60px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Starfield background */
+        .process-hero::before {
+            display: none;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%); }
+            50% { background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); }
+        }
+
+        @keyframes card-glow {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 217, 255, 0.3), 0 0 60px rgba(27, 110, 58, 0.2); }
+            50% { box-shadow: 0 0 50px rgba(0, 217, 255, 0.6), 0 0 80px rgba(27, 110, 58, 0.4); }
+        }
+
+        /* Meteor shower animation */
+        @keyframes meteor-fall {
+            0% {
+                transform: translateY(-100px) translateX(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(600px) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        .meteor {
+            display: none;
+        }
+
+        .process-hero h1 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin: 20px auto 10px;
+            position: relative;
+            z-index: 2;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .process-hero p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .process-steps-container {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, var(--gradient-2) 0%, var(--gradient-3) 50%);
+            position: relative;
+        }
+
+        /* Animated particles in background */
+        .process-steps-container::before {
+            display: none;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .process-step:nth-child(even) .step-content {
+            order: 2;
+        }
+
+        .process-step:nth-child(even) .step-illustration {
+            order: 1;
+        }
+
+        .step-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            animation: card-glow 3s ease-in-out infinite;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -25px;
+            left: 40px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--success-color) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse-neon 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-neon {
+            0%, 100% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+            50% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); }
+        }
+
+        .step-content h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .step-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .step-illustration {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .step-illustration svg {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.5)) drop-shadow(0 0 40px rgba(27, 110, 58, 0.3));
+        }
+
+        /* Animations */
+        @keyframes slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .process-step {
+            opacity: 0;
+            animation: slide-in-left 0.8s ease-out forwards;
+        }
+
+        .process-step:nth-child(1) { animation-delay: 0.2s; }
+        .process-step:nth-child(2) { animation-delay: 0.4s; }
+        .process-step:nth-child(3) { animation-delay: 0.6s; }
+        .process-step:nth-child(4) { animation-delay: 0.8s; }
+
+        /* Chat bubbles animation */
+        @keyframes chat-bubble {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .chat-bubble {
+            animation: chat-bubble 2s ease-in-out infinite;
+        }
+
+        .chat-bubble-2 {
+            animation: chat-bubble 2s ease-in-out infinite;
+            animation-delay: 0.3s;
+        }
+
+        /* Document animation */
+        @keyframes document-wave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .document-animate {
+            animation: document-wave 3s ease-in-out infinite;
+        }
+
+        /* Build animation */
+        @keyframes build-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .build-pulse {
+            animation: build-pulse 1.5s ease-in-out infinite;
+        }
+
+        /* Launch animation */
+        @keyframes rocket-launch {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .rocket-animate {
+            animation: rocket-launch 2s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .process-step,
+            .process-step:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step:nth-child(even) .step-content,
+            .process-step:nth-child(even) .step-illustration {
+                order: initial;
+            }
+
+            .step-illustration {
+                max-width: 350px;
+            }
+
+            .step-content {
+                padding: 35px;
+            }
+
+            .process-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="NORDBREEZEMEDIA.png" alt="Nord Breeze Media Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="packages.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="packages.html">Web Design Packages</a></li>
+                        <li><a href="seo-packages.html">SEO Packages</a></li>
+                        <li><a href="social-media-services.html">Social Media Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="index.html#contact">Connect With Us</a></li>
+            </ul>
+            <div id="google_translate_element" class="translate-widget"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-inner">
+            <h1>Our Process</h1>
+            <p>From discovery to launch, we guide you through a smooth, step-by-step journey to a website that fits your business.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="process-steps-container" id="process-steps">
+        <div class="container">
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="step-content">
+                    <div class="step-number">1</div>
+                    <h2>Let's Chat</h2>
+                    <p>Free consultation, no pressure. Tell us your goals, your ideas, or just shoot your shot — we'll listen and brainstorm with you.</p>
+                </div>
+                <div class="step-illustration">
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="neon-glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Space background stars with twinkle -->
+                        <circle cx="80" cy="50" r="1.5" fill="#fff" opacity="0.8">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="420" cy="80" r="1" fill="#fff" opacity="0.6">
+                            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="450" cy="150" r="1.5" fill="#fff" opacity="0.7">
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="100" cy="320" r="1" fill="#fff" opacity="0.5">
+                            <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3.5s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <!-- Person speaking with neon glow and waving hand -->
+                        <g class="float-anim">
+                            <circle cx="150" cy="200" r="30" fill="#1B6E3A" filter="url(#neon-glow)" opacity="0.8">
+                                <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="150" cy="150" r="20" fill="#D4A574"/>
+                            <!-- Happy eyes -->
+                            <circle cx="144" cy="148" r="2" fill="#000"/>
+                            <circle cx="156" cy="148" r="2" fill="#000"/>
+                            <!-- Eye sparkles -->
+                            <circle cx="145" cy="147" r="0.8" fill="#fff" opacity="0.9"/>
+                            <circle cx="157" cy="147" r="0.8" fill="#fff" opacity="0.9"/>
+                            <!-- Big smile -->
+                            <path d="M 140 154 Q 150 162 160 154" stroke="#000" stroke-width="2" fill="none" opacity="0.8"/>
+                            <!-- Waving hand with animation -->
+                            <line x1="120" y1="210" x2="100" y2="250" stroke="#00D9FF" stroke-width="6" stroke-linecap="round" filter="url(#neon-glow)">
+                                <animateTransform attributeName="transform" type="rotate" values="0 120 210; -15 120 210; 0 120 210; 15 120 210; 0 120 210" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="180" y1="210" x2="200" y2="250" stroke="#A8D5BA" stroke-width="6" stroke-linecap="round" filter="url(#neon-glow)"/>
+                        </g>
+                        
+                        <!-- Animated neon chat bubble with typing dots -->
+                        <g class="float-anim" style="animation-delay: 0.3s">
+                            <rect x="280" y="100" width="140" height="80" rx="15" fill="rgba(0, 217, 255, 0.1)" stroke="#00D9FF" stroke-width="2.5" filter="url(#neon-glow)">
+                                <animate attributeName="stroke-width" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite"/>
+                            </rect>
+                            <polygon points="280,135 260,155 280,155" fill="rgba(0, 217, 255, 0.1)" stroke="#00D9FF" stroke-width="2.5" filter="url(#neon-glow)"/>
+                            <!-- Text lines appearing sequentially -->
+                            <line x1="295" y1="120" x2="400" y2="120" stroke="#00D9FF" stroke-width="2.5" filter="url(#neon-glow)" opacity="0">
+                                <animate attributeName="opacity" values="0;1;1;1" dur="4s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="295" y1="145" x2="390" y2="145" stroke="#A8D5BA" stroke-width="2.5" filter="url(#neon-glow)" opacity="0">
+                                <animate attributeName="opacity" values="0;0;1;1" dur="4s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="295" y1="170" x2="410" y2="170" stroke="#00D9FF" stroke-width="2.5" filter="url(#neon-glow)" opacity="0">
+                                <animate attributeName="opacity" values="0;0;0;1" dur="4s" repeatCount="indefinite"/>
+                            </line>
+                        </g>
+                        
+                        <!-- Second chat bubble with response animation -->
+                        <g class="float-anim" style="animation-delay: 0.6s">
+                            <rect x="80" y="260" width="140" height="80" rx="15" fill="rgba(168, 213, 186, 0.1)" stroke="#A8D5BA" stroke-width="2.5" filter="url(#neon-glow)">
+                                <animate attributeName="stroke-width" values="2.5;3.5;2.5" dur="2.5s" repeatCount="indefinite"/>
+                            </rect>
+                            <polygon points="220,295 240,315 220,315" fill="rgba(168, 213, 186, 0.1)" stroke="#A8D5BA" stroke-width="2.5" filter="url(#neon-glow)"/>
+                            <!-- Typing indicator dots -->
+                            <circle cx="130" cy="300" r="3" fill="#A8D5BA" filter="url(#neon-glow)">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="150" cy="300" r="3" fill="#00D9FF" filter="url(#neon-glow)">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="170" cy="300" r="3" fill="#1B6E3A" filter="url(#neon-glow)">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.4s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        
+                        <!-- Energy/connection lines between person and chat -->
+                        <line x1="180" y1="150" x2="280" y2="140" stroke="#00D9FF" stroke-width="1.5" opacity="0.4" filter="url(#neon-glow)" stroke-dasharray="5,5">
+                            <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
+                        </line>
+                        
+                        <!-- Orbiting particles -->
+                        <circle cx="350" cy="200" r="2.5" fill="#00D9FF" filter="url(#neon-glow)">
+                            <animateTransform attributeName="transform" type="rotate" from="0 310 140" to="360 310 140" dur="4s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="380" cy="180" r="2" fill="#A8D5BA" filter="url(#neon-glow)">
+                            <animateTransform attributeName="transform" type="rotate" from="0 310 140" to="360 310 140" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="step-content">
+                    <div class="step-number">2</div>
+                    <h2>Pick Your Package & Plan It Out</h2>
+                    <p>Pick the website or social media package that fits you. We'll go over a simple outline so you know exactly what's coming and we're aligned every step of the way.</p>
+                </div>
+                <div class="step-illustration">
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="neon-glow2">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Stars -->
+                        <circle cx="50" cy="50" r="1.5" fill="#fff" opacity="0.8"/>
+                        <circle cx="480" cy="120" r="1" fill="#fff" opacity="0.6"/>
+                        <circle cx="420" cy="350" r="1.5" fill="#fff" opacity="0.7"/>
+                        
+                        <!-- Person with pointing gesture -->
+                        <g class="float-anim">
+                            <circle cx="100" cy="200" r="28" fill="#1B6E3A" filter="url(#neon-glow2)" opacity="0.8"/>
+                            <circle cx="100" cy="155" r="18" fill="#D4A574"/>
+                            <!-- Excited eyes -->
+                            <circle cx="95" cy="153" r="2" fill="#000"/>
+                            <circle cx="105" cy="153" r="2" fill="#000"/>
+                            <!-- Sparkles in eyes -->
+                            <circle cx="96" cy="152" r="0.7" fill="#fff" opacity="0.9"/>
+                            <circle cx="106" cy="152" r="0.7" fill="#fff" opacity="0.9"/>
+                            <!-- Big excited smile -->
+                            <path d="M 92 158 Q 100 166 108 158" stroke="#000" stroke-width="1.8" fill="none" opacity="0.8"/>
+                            <!-- Raised eyebrows -->
+                            <path d="M 92 148 Q 95 146 98 148" stroke="#000" stroke-width="1" fill="none" opacity="0.6"/>
+                            <path d="M 102 148 Q 105 146 108 148" stroke="#000" stroke-width="1" fill="none" opacity="0.6"/>
+                            <line x1="75" y1="210" x2="50" y2="250" stroke="#00D9FF" stroke-width="5" stroke-linecap="round" filter="url(#neon-glow2)"/>
+                            <line x1="125" y1="210" x2="150" y2="260" stroke="#A8D5BA" stroke-width="5" stroke-linecap="round" filter="url(#neon-glow2)"/>
+                            <!-- Pointing finger -->
+                            <line x1="150" y1="180" x2="200" y2="150" stroke="#00D9FF" stroke-width="4" stroke-linecap="round" filter="url(#neon-glow2)"/>
+                        </g>
+                        
+                        <!-- Three floating package boxes with neon glow -->
+                        <g class="float-anim" style="animation-delay: 0.2s">
+                            <rect x="240" y="80" width="100" height="120" rx="8" fill="none" stroke="#00D9FF" stroke-width="2.5" filter="url(#neon-glow2)"/>
+                            <line x1="250" y1="110" x2="330" y2="110" stroke="#00D9FF" stroke-width="1.5" opacity="0.8" filter="url(#neon-glow2)"/>
+                            <line x1="250" y1="130" x2="315" y2="130" stroke="#A8D5BA" stroke-width="1.5" opacity="0.8" filter="url(#neon-glow2)"/>
+                            <line x1="250" y1="150" x2="320" y2="150" stroke="#00D9FF" stroke-width="1.5" opacity="0.8" filter="url(#neon-glow2)"/>
+                            <circle cx="290" cy="175" r="4" fill="#A8D5BA" filter="url(#neon-glow2)"/>
+                        </g>
+                        
+                        <g class="float-anim" style="animation-delay: 0.4s">
+                            <rect x="360" y="120" width="100" height="140" rx="8" fill="none" stroke="#A8D5BA" stroke-width="2.5" filter="url(#neon-glow2)"/>
+                            <rect x="375" y="145" width="70" height="90" rx="4" fill="none" stroke="#1B6E3A" stroke-width="1.5" filter="url(#neon-glow2)"/>
+                            <text x="410" y="195" font-size="12" fill="#00D9FF" text-anchor="middle" filter="url(#neon-glow2)">Popular</text>
+                        </g>
+                        
+                        <g class="float-anim" style="animation-delay: 0.6s">
+                            <rect x="280" y="250" width="100" height="120" rx="8" fill="none" stroke="#1B6E3A" stroke-width="2.5" filter="url(#neon-glow2)"/>
+                            <line x1="290" y1="280" x2="370" y2="280" stroke="#A8D5BA" stroke-width="1.5" opacity="0.8" filter="url(#neon-glow2)"/>
+                            <circle cx="330" cy="320" r="5" fill="#00D9FF" filter="url(#neon-glow2)"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="step-content">
+                    <div class="step-number">3</div>
+                    <h2>We Build, You Chill</h2>
+                    <p>Sit back and relax while we handle everything. We'll check in weekly to review, tweak, and perfect things as needed. No stress — we've got the heavy lifting covered.</p>
+                </div>
+                <div class="step-illustration">
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="neon-glow3">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Stars -->
+                        <circle cx="60" cy="40" r="1.5" fill="#fff" opacity="0.8"/>
+                        <circle cx="470" cy="100" r="1" fill="#fff" opacity="0.6"/>
+                        <circle cx="400" cy="80" r="1.5" fill="#fff" opacity="0.7"/>
+                        <circle cx="100" cy="320" r="1" fill="#fff" opacity="0.5"/>
+                        
+                        <!-- Developer at desk -->
+                        <g class="float-anim">
+                            <rect x="80" y="200" width="60" height="100" rx="8" fill="rgba(27, 110, 58, 0.3)" stroke="#1B6E3A" stroke-width="2" filter="url(#neon-glow3)"/>
+                            <ellipse cx="110" cy="160" rx="30" ry="40" fill="#5B4B8A"/>
+                            <circle cx="110" cy="120" r="20" fill="#D4A574"/>
+                            <!-- Focused/happy eyes -->
+                            <circle cx="104" cy="118" r="2" fill="#000"/>
+                            <circle cx="116" cy="118" r="2" fill="#000"/>
+                            <!-- Eye sparkles -->
+                            <circle cx="105" cy="117" r="0.8" fill="#fff" opacity="0.9"/>
+                            <circle cx="117" cy="117" r="0.8" fill="#fff" opacity="0.9"/>
+                            <!-- Content smile -->
+                            <path d="M 103 124 Q 110 129 117 124" stroke="#000" stroke-width="1.5" fill="none" opacity="0.8"/>
+                            <!-- Cool glasses reflection (optional detail) -->
+                            <line x1="98" y1="118" x2="112" y2="118" stroke="#00D9FF" stroke-width="0.5" opacity="0.3" filter="url(#neon-glow3)"/>
+                        </g>
+                        
+                        <!-- Glowing monitor/screen -->
+                        <g class="float-anim" style="animation-delay: 0.3s">
+                            <rect x="220" y="80" width="180" height="140" rx="10" fill="none" stroke="#00D9FF" stroke-width="3" filter="url(#neon-glow3)"/>
+                            <!-- Screen glow -->
+                            <rect x="230" y="95" width="160" height="110" fill="none" stroke="#00D9FF" stroke-width="1" opacity="0.5" filter="url(#neon-glow3)"/>
+                            
+                            <!-- Logo on screen (positioned higher) -->
+                            <image x="265" y="125" width="70" height="70" href="NORDBREEZEMEDIA.png" opacity="0.9" filter="url(#neon-glow3)"/>
+                            
+                            <!-- Progress bar -->
+                            <rect x="240" y="195" width="120" height="6" rx="3" fill="none" stroke="#00D9FF" stroke-width="1.5" filter="url(#neon-glow3)"/>
+                            <rect x="240" y="195" width="90" height="6" rx="3" fill="#00D9FF" opacity="0.7" filter="url(#neon-glow3)">
+                                <animate attributeName="width" values="0;90;120;90" dur="3s" repeatCount="indefinite"/>
+                            </rect>
+                        </g>
+                        
+                        <!-- Success checkmark floating -->
+                        <g class="pulse-anim">
+                            <circle cx="420" cy="280" r="35" fill="none" stroke="#A8D5BA" stroke-width="2.5" filter="url(#neon-glow3)"/>
+                            <path d="M 405 280 L 418 293 L 440 265" stroke="#A8D5BA" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#neon-glow3)"/>
+                        </g>
+                        
+                        <!-- Celebration particles -->
+                        <g class="slide-anim">
+                            <circle cx="330" cy="240" r="2.5" fill="#00D9FF" filter="url(#neon-glow3)"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+                <div class="step-content">
+                    <div class="step-number">4</div>
+                    <h2>Launch & Your Choice</h2>
+                    <p>Your site is live! We can host and maintain it for you, or hand over the files so you can do your thing. Easy. Breezy. Done.</p>
+                </div>
+                <div class="step-illustration">
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="neon-glow4">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Space stars -->
+                        <circle cx="70" cy="50" r="1.5" fill="#fff" opacity="0.8"/>
+                        <circle cx="480" cy="140" r="1" fill="#fff" opacity="0.6"/>
+                        <circle cx="380" cy="60" r="1.5" fill="#fff" opacity="0.7"/>
+                        <circle cx="120" cy="300" r="1" fill="#fff" opacity="0.5"/>
+                        <circle cx="450" cy="320" r="1.5" fill="#fff" opacity="0.7"/>
+                        
+                        <!-- Globe/World -->
+                        <g class="float-anim">
+                            <circle cx="250" cy="200" r="70" fill="none" stroke="#00D9FF" stroke-width="3" filter="url(#neon-glow4)"/>
+                            <!-- Latitude lines -->
+                            <ellipse cx="250" cy="200" rx="70" ry="20" fill="none" stroke="#A8D5BA" stroke-width="1.5" opacity="0.7" filter="url(#neon-glow4)"/>
+                            <ellipse cx="250" cy="200" rx="70" ry="40" fill="none" stroke="#A8D5BA" stroke-width="1.5" opacity="0.5" filter="url(#neon-glow4)"/>
+                            <!-- Longitude line -->
+                            <ellipse cx="250" cy="200" rx="35" ry="70" fill="none" stroke="#1B6E3A" stroke-width="1.5" opacity="0.7" filter="url(#neon-glow4)"/>
+                        </g>
+                        
+                        <!-- Browser window launching -->
+                        <g class="pulse-anim">
+                            <rect x="140" y="100" width="90" height="70" rx="5" fill="none" stroke="#00D9FF" stroke-width="2.5" filter="url(#neon-glow4)"/>
+                            <!-- Browser dots -->
+                            <circle cx="150" cy="112" r="2.5" fill="#00D9FF" filter="url(#neon-glow4)"/>
+                            <circle cx="160" cy="112" r="2.5" fill="#A8D5BA" filter="url(#neon-glow4)"/>
+                            <circle cx="170" cy="112" r="2.5" fill="#1B6E3A" filter="url(#neon-glow4)"/>
+                            <!-- Content lines -->
+                            <line x1="150" y1="130" x2="215" y2="130" stroke="#00D9FF" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="150" y1="145" x2="210" y2="145" stroke="#A8D5BA" stroke-width="1.5" opacity="0.6"/>
+                        </g>
+                        
+                        <!-- Second browser window -->
+                        <g class="float-anim" style="animation-delay: 0.3s">
+                            <rect x="280" y="120" width="90" height="70" rx="5" fill="none" stroke="#A8D5BA" stroke-width="2.5" filter="url(#neon-glow4)"/>
+                            <circle cx="290" cy="132" r="2.5" fill="#A8D5BA" filter="url(#neon-glow4)"/>
+                            <circle cx="300" cy="132" r="2.5" fill="#1B6E3A" filter="url(#neon-glow4)"/>
+                            <circle cx="310" cy="132" r="2.5" fill="#00D9FF" filter="url(#neon-glow4)"/>
+                            <line x1="290" y1="150" x2="355" y2="150" stroke="#A8D5BA" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="290" y1="165" x2="350" y2="165" stroke="#00D9FF" stroke-width="1.5" opacity="0.6"/>
+                        </g>
+                        
+                        <!-- Upload/Launch arrows -->
+                        <g class="pulse-anim" style="animation-delay: 0.2s">
+                            <path d="M 200 280 L 200 240 L 185 255 M 200 240 L 215 255" stroke="#00D9FF" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#neon-glow4)"/>
+                        </g>
+                        <g class="pulse-anim" style="animation-delay: 0.4s">
+                            <path d="M 300 290 L 300 250 L 285 265 M 300 250 L 315 265" stroke="#A8D5BA" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#neon-glow4)"/>
+                        </g>
+                        
+                        <!-- Celebrating person -->
+                        <g class="slide-anim">
+                            <ellipse cx="80" cy="260" rx="28" ry="42" fill="#5B4B8A"/>
+                            <circle cx="80" cy="210" r="22" fill="#D4A574"/>
+                            <!-- Super excited eyes -->
+                            <circle cx="74" cy="208" r="2.5" fill="#000"/>
+                            <circle cx="86" cy="208" r="2.5" fill="#000"/>
+                            <!-- Big eye sparkles for excitement -->
+                            <circle cx="75" cy="207" r="1" fill="#fff" opacity="0.9"/>
+                            <circle cx="87" cy="207" r="1" fill="#fff" opacity="0.9"/>
+                            <!-- Huge celebration smile -->
+                            <path d="M 70 214 Q 80 224 90 214" stroke="#000" stroke-width="2" fill="none" opacity="0.8"/>
+                            <!-- Open mouth excitement -->
+                            <ellipse cx="80" cy="218" rx="4" ry="3" fill="#000" opacity="0.3"/>
+                            <!-- Raised eyebrows for excitement -->
+                            <path d="M 70 203 Q 74 200 78 203" stroke="#000" stroke-width="1.2" fill="none" opacity="0.6"/>
+                            <path d="M 82 203 Q 86 200 90 203" stroke="#000" stroke-width="1.2" fill="none" opacity="0.6"/>
+                            <!-- Arms raised in celebration -->
+                            <line x1="52" y1="275" x2="30" y2="240" stroke="#00D9FF" stroke-width="5" stroke-linecap="round" filter="url(#neon-glow4)">
+                                <animateTransform attributeName="transform" type="rotate" values="0 52 275; -10 52 275; 0 52 275" dur="1.5s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="108" y1="275" x2="130" y2="240" stroke="#A8D5BA" stroke-width="5" stroke-linecap="round" filter="url(#neon-glow4)">
+                                <animateTransform attributeName="transform" type="rotate" values="0 108 275; 10 108 275; 0 108 275" dur="1.5s" repeatCount="indefinite"/>
+                            </line>
+                        </g>
+                        
+                        <!-- Celebration sparkles -->
+                        <g class="float-anim" style="animation-delay: 0.2s">
+                            <circle cx="320" cy="100" r="3.5" fill="#00D9FF" filter="url(#neon-glow4)"/>
+                        </g>
+                        <g class="float-anim" style="animation-delay: 0.4s">
+                            <circle cx="180" cy="120" r="3" fill="#A8D5BA" filter="url(#neon-glow4)"/>
+                        </g>
+                        <g class="float-anim" style="animation-delay: 0.6s">
+                            <circle cx="380" cy="180" r="2.5" fill="#1B6E3A" filter="url(#neon-glow4)"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                </div>
+                <div class="footer-right">
+                    <div class="footer-simple">
+                        <p>&copy; 2026 Nord Breeze Media. All rights reserved.</p>
+                        <img src="NORDBREEZEMEDIA.png" alt="Nord Breeze Media Logo" class="footer-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="script.js"></script>
+</body>
+</html>

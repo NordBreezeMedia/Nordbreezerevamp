@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="neonGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1B6E3A;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#A8D5BA;stop-opacity:0.05" />
+        </linearGradient>
+        <filter id="neonGlow1">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="neonGlow2">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#neonGradient1)"/>
+
+    <!-- Neon Grid Lines -->
+    <line x1="150" y1="0" x2="150" y2="600" stroke="#1B6E3A" stroke-width="1" opacity="0.15"/>
+    <line x1="300" y1="0" x2="300" y2="600" stroke="#00D9FF" stroke-width="1" opacity="0.1"/>
+    <line x1="450" y1="0" x2="450" y2="600" stroke="#1B6E3A" stroke-width="1" opacity="0.15"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#00D9FF" stroke-width="1" opacity="0.1"/>
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#1B6E3A" stroke-width="1" opacity="0.1"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#00D9FF" stroke-width="1" opacity="0.15"/>
+    <line x1="0" y1="450" x2="800" y2="450" stroke="#1B6E3A" stroke-width="1" opacity="0.1"/>
+
+    <!-- Neon Code Editor Illustration -->
+    <!-- Monitor with neon border -->
+    <defs>
+        <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.3" />
+            <stop offset="100%" style="stop-color:#1B6E3A;stop-opacity:0.2" />
+        </linearGradient>
+    </defs>
+
+    <!-- Monitor Stand -->
+    <rect x="250" y="320" width="300" height="20" rx="3" fill="#2C3E50" opacity="0.8"/>
+    <rect x="370" y="340" width="60" height="40" rx="3" fill="#34495E" opacity="0.7"/>
+
+    <!-- Monitor Screen with Neon Effect -->
+    <rect x="200" y="80" width="400" height="240" rx="15" fill="#0F1419" stroke="#1B6E3A" stroke-width="3" filter="url(#neonGlow1)"/>
+    
+    <!-- Screen Content - Neon Code Lines -->
+    <line x1="220" y1="110" x2="340" y2="110" stroke="#1B6E3A" stroke-width="3" filter="url(#neonGlow2)" opacity="0.9"/>
+    <line x1="220" y1="135" x2="560" y2="135" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow2)" opacity="0.8"/>
+    <line x1="220" y1="160" x2="480" y2="160" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow2)" opacity="0.7"/>
+    <line x1="220" y1="185" x2="520" y2="185" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow2)" opacity="0.8"/>
+    <line x1="220" y1="210" x2="450" y2="210" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow2)" opacity="0.7"/>
+    <line x1="220" y1="235" x2="380" y2="235" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow2)" opacity="0.6"/>
+    <line x1="220" y1="260" x2="520" y2="260" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow2)" opacity="0.7"/>
+    <line x1="220" y1="285" x2="400" y2="285" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow2)" opacity="0.8"/>
+
+    <!-- Neon Brackets and Symbols -->
+    <text x="565" y="140" font-family="monospace" font-size="24" fill="#1B6E3A" filter="url(#neonGlow2)" opacity="0.9">{</text>
+    <text x="565" y="190" font-family="monospace" font-size="24" fill="#00D9FF" filter="url(#neonGlow2)" opacity="0.8">}</text>
+    <text x="565" y="240" font-family="monospace" font-size="24" fill="#A8D5BA" filter="url(#neonGlow2)" opacity="0.7">;</text>
+
+    <!-- Person sitting at desk -->
+    <!-- Chair -->
+    <rect x="80" y="340" width="60" height="15" rx="7" fill="#2C3E50" opacity="0.8"/>
+    <rect x="100" y="355" width="25" height="60" rx="5" fill="#34495E" opacity="0.7"/>
+
+    <!-- Body -->
+    <ellipse cx="110" cy="280" rx="35" ry="45" fill="#5B4B8A"/>
+
+    <!-- Head -->
+    <circle cx="110" cy="220" r="22" fill="#D4A574"/>
+
+    <!-- Arms reaching toward keyboard -->
+    <g class="neon-typing">
+        <line x1="75" y1="290" x2="45" y2="350" stroke="#D4A574" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+        <circle cx="43" cy="355" r="6" fill="#D4A574" opacity="0.9"/>
+    </g>
+    
+    <g class="neon-typing" style="animation-delay: 0.2s">
+        <line x1="145" y1="290" x2="175" y2="350" stroke="#D4A574" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+        <circle cx="177" cy="355" r="6" fill="#D4A574" opacity="0.9"/>
+    </g>
+
+    <!-- Legs -->
+    <rect x="100" y="325" width="10" height="40" rx="5" fill="#3B2E5C"/>
+    <rect x="120" y="325" width="10" height="40" rx="5" fill="#3B2E5C"/>
+
+    <!-- Keyboard (simplified neon style) -->
+    <rect x="40" y="365" width="140" height="35" rx="3" fill="#2C3E50" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow1)"/>
+    <circle cx="60" cy="378" r="4" fill="#1B6E3A" filter="url(#neonGlow2)"/>
+    <circle cx="85" cy="378" r="4" fill="#00D9FF" filter="url(#neonGlow2)"/>
+    <circle cx="110" cy="378" r="4" fill="#A8D5BA" filter="url(#neonGlow2)"/>
+    <circle cx="60" cy="395" r="4" fill="#00D9FF" filter="url(#neonGlow2)"/>
+    <circle cx="85" cy="395" r="4" fill="#1B6E3A" filter="url(#neonGlow2)"/>
+
+    <!-- Neon Floating Elements -->
+    <g class="neon-float-1">
+        <circle cx="600" cy="120" r="30" fill="none" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow2)" opacity="0.8"/>
+        <circle cx="600" cy="120" r="25" fill="none" stroke="#00D9FF" stroke-width="1" filter="url(#neonGlow2)" opacity="0.6"/>
+    </g>
+
+    <g class="neon-float-2">
+        <rect x="650" y="280" width="80" height="80" rx="10" fill="none" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow2)" opacity="0.7"/>
+        <line x1="690" y1="280" x2="690" y2="360" stroke="#1B6E3A" stroke-width="1" filter="url(#neonGlow2)" opacity="0.5"/>
+    </g>
+
+    <g class="neon-float-3">
+        <circle cx="150" cy="480" r="35" fill="none" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow2)" opacity="0.75"/>
+        <circle cx="150" cy="480" r="20" fill="none" stroke="#1B6E3A" stroke-width="1" filter="url(#neonGlow2)" opacity="0.6"/>
+    </g>
+
+    <!-- Floating Data Particles -->
+    <circle cx="450" cy="500" r="3" fill="#1B6E3A" filter="url(#neonGlow2)" opacity="0.8"/>
+    <circle cx="480" cy="520" r="2" fill="#00D9FF" filter="url(#neonGlow2)" opacity="0.7"/>
+    <circle cx="420" cy="540" r="2.5" fill="#A8D5BA" filter="url(#neonGlow2)" opacity="0.6"/>
+    <circle cx="510" cy="480" r="3" fill="#1B6E3A" filter="url(#neonGlow2)" opacity="0.7"/>
+
+    <style>
+        @keyframes neon-float-1 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -15px); }
+        }
+        @keyframes neon-float-2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-15px, 20px); }
+        }
+        @keyframes neon-float-3 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(25px, 10px); }
+        }
+        @keyframes neon-typing {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        .neon-float-1 { animation: neon-float-1 4s ease-in-out infinite; }
+        .neon-float-2 { animation: neon-float-2 4.5s ease-in-out infinite; }
+        .neon-float-3 { animation: neon-float-3 5s ease-in-out infinite; }
+        .neon-typing { animation: neon-typing 0.5s ease-in-out infinite; }
+    </style>
+</svg>

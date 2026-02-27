@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Management Services - Nord Breeze Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="NORDBREEZEMEDIA.png">
+    <!-- Updated: Feb 2, 2026 -->
+    <style>
+        .packages-hero {
+            background: linear-gradient(135deg, #E9F7F3 0%, #CDEFF6 45%, #DFF6E8 100%);
+            background-size: 200% 200%;
+            animation: hero-wave 18s ease-in-out infinite;
+            padding: 100px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .packages-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(0, 217, 255, 0.08), transparent 55%),
+                        radial-gradient(circle at 80% 30%, rgba(168, 213, 186, 0.1), transparent 60%),
+                        radial-gradient(circle at 50% 80%, rgba(179, 229, 252, 0.1), transparent 60%);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .packages-hero h1 {
+            font-size: 3.2rem;
+            color: #000000;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 3;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .packages-hero p {
+            font-size: 1.2rem;
+            color: #000000;
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+        }
+
+        .packages-section {
+            padding: 80px 20px;
+            background: radial-gradient(
+                circle at 50% 50%,
+                #F1FBF6 0%,
+                #DFF6E8 30%,
+                #CDEFF6 55%,
+                #BFE6DE 80%,
+                #F1FBF6 100%
+            );
+            background-size: 200% 200%;
+            animation: rotate-gradient 16s ease-in-out infinite;
+            position: relative;
+            border-top: none;
+            margin-top: 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .package-card {
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.96) 0%,
+                rgba(179, 229, 252, 0.12) 40%,
+                rgba(168, 213, 186, 0.12) 100%
+            );
+            background-size: 200% 200%;
+            animation: package-wave 18s ease-in-out infinite;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            border: 1px solid #e0e0e0;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: var(--border-radius);
+            background: radial-gradient(
+                circle at 20% 20%,
+                rgba(0, 217, 255, 0.12) 0%,
+                rgba(168, 213, 186, 0.08) 35%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            background-size: 200% 200%;
+            animation: package-wave 16s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.35;
+            mix-blend-mode: screen;
+        }
+
+        .package-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            background: #000000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .price-tag {
+            font-size: 2.6rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .cta-section-services {
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--logo-blue-light);
+            color: white;
+        }
+
+        .cta-section-services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section-services p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        @keyframes hero-wave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .packages-hero h1 { font-size: 2.4rem; }
+            .packages-grid { grid-template-columns: 1fr; }
+        }
+
+        @keyframes rotate-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes package-wave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="NORDBREEZEMEDIA.png" alt="Nord Breeze Media Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="packages.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="packages.html">Web Design Packages</a></li>
+                        <li><a href="seo-packages.html">SEO Packages</a></li>
+                        <li><a href="social-media-services.html">Social Media Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="index.html#contact">Connect With Us</a></li>
+            </ul>
+            <div id="google_translate_element" class="translate-widget"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <section class="service-hero">
+        <div class="service-hero-inner">
+            <h1>Social Media Management</h1>
+            <p>Consistent posting, engaging content creation, and professional management across all major platforms. Build your online presence with scheduled posts and strategic planning.</p>
+            <a href="#social-packages" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Social Media Package -->
+    <section class="packages-section" id="social-packages">
+        <div class="container">
+            <div class="packages-grid">
+                <div class="package-card">
+                    <span class="package-badge">Monthly Plan</span>
+                    <h3>Social Media Management</h3>
+                    <div class="price-tag">$100 / month</div>
+                    <p>Managing your social media postings with consistent content and scheduling.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 3 posts per week</li>
+                        <li><i class="fas fa-check-circle"></i> Captions + scheduling</li>
+                        <li><i class="fas fa-check-circle"></i> Basic engagement monitoring</li>
+                        <li><i class="fas fa-check-circle"></i> Monthly content calendar</li>
+                        <li><i class="fas fa-check-circle"></i> Includes website hosting & maintenance</li>
+                    </ul>
+                </div>
+
+                <div class="package-card featured">
+                    <span class="package-badge">Most Popular</span>
+                    <h3>Enhanced Management</h3>
+                    <div class="price-tag">$150 / month</div>
+                    <p>Elevated social media presence with increased posting frequency and deeper engagement.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 6 posts per week</li>
+                        <li><i class="fas fa-check-circle"></i> Professional captions + scheduling</li>
+                        <li><i class="fas fa-check-circle"></i> Active engagement management</li>
+                        <li><i class="fas fa-check-circle"></i> Weekly content calendar</li>
+                        <li><i class="fas fa-check-circle"></i> Story highlights & updates</li>
+                        <li><i class="fas fa-check-circle"></i> Includes website hosting & maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section-services">
+        <h2>Ready to Grow Your Social Presence?</h2>
+        <p>Let’s get your content consistent and your brand visible every week.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-large" style="background-color: white; color: var(--dark-color); margin-top: 20px;">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nord Breeze Media. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="script.js"></script>
+</body>
+</html>

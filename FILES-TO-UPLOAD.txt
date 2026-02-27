@@ -1,0 +1,40 @@
+FILES TO UPLOAD TO CPANEL (for the updated Nord Breeze Media site)
+===============================================================
+
+Upload these from your folder "Nord Breeze Digital WEBSITE" into 
+public_html (or your web root) on cPanel. Keep the same structure.
+
+REQUIRED – main site:
+  index.html
+  styles.css
+  script.js
+  nordbreezemedia.png
+
+REQUIRED – pages (upload to same folder as index.html):
+  packages.html
+  seo-packages.html
+  social-media-services.html
+  process.html
+  drift-package.html
+  current-package.html
+  boreal-package.html
+  aurora-package.html
+
+OPTIONAL – only if your live site uses them:
+  neon-analytics.svg
+  neon-designer.svg
+  neon-developer.svg
+  team-illustration.html
+
+DO NOT UPLOAD (for your use only, not for the live site):
+  Start-Server.bat
+  HOW-TO-VIEW-LOCALLY.txt
+  FILES-TO-UPLOAD.txt (this file)
+  remove_background_guide.html
+  clean_laptop_icon.html
+  remove_bg.py
+
+TIP: In cPanel File Manager, upload the whole folder, then move the 
+files from "Nord Breeze Digital WEBSITE" into public_html (or merge 
+with existing site files). Make sure nordbreezemedia.png is in the 
+same folder as index.html.

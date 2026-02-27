@@ -1,0 +1,123 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="neonBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1B6E3A;stop-opacity:0.08" />
+            <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:0.05" />
+        </linearGradient>
+        <filter id="neonGlow3">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="neonGlow4">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#neonBg2)"/>
+
+    <!-- Neon Grid -->
+    <circle cx="400" cy="300" r="200" fill="none" stroke="#1B6E3A" stroke-width="1" opacity="0.12"/>
+    <circle cx="400" cy="300" r="150" fill="none" stroke="#00D9FF" stroke-width="1" opacity="0.1"/>
+    <circle cx="400" cy="300" r="100" fill="none" stroke="#A8D5BA" stroke-width="1" opacity="0.08"/>
+
+    <!-- Designer at Tablet -->
+    <!-- Tablet/Pad with Neon Glow -->
+    <rect x="320" y="180" width="160" height="220" rx="15" fill="#0F1419" stroke="#00D9FF" stroke-width="3" filter="url(#neonGlow3)"/>
+    
+    <!-- Tablet Screen Content - Neon Design Elements -->
+    <rect x="340" y="200" width="120" height="80" rx="8" fill="none" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow4)" opacity="0.85"/>
+    <circle cx="400" cy="245" r="25" fill="none" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow4)" opacity="0.8"/>
+    
+    <rect x="340" y="295" width="120" height="60" rx="6" fill="none" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow4)" opacity="0.8"/>
+    <line x1="350" y1="310" x2="450" y2="310" stroke="#1B6E3A" stroke-width="1.5" filter="url(#neonGlow4)" opacity="0.7"/>
+    <line x1="350" y1="325" x2="430" y2="325" stroke="#A8D5BA" stroke-width="1.5" filter="url(#neonGlow4)" opacity="0.65"/>
+
+    <!-- Stylus/Pen -->
+    <line x1="500" y1="220" x2="520" y2="280" stroke="#1B6E3A" stroke-width="4" stroke-linecap="round" filter="url(#neonGlow4)" opacity="0.9"/>
+    <circle cx="522" cy="282" r="5" fill="#1B6E3A" filter="url(#neonGlow4)" opacity="0.95"/>
+
+    <!-- Designer Person -->
+    <!-- Body -->
+    <ellipse cx="550" cy="320" rx="30" ry="50" fill="#6B5B95"/>
+
+    <!-- Head -->
+    <circle cx="550" cy="240" r="20" fill="#D4A574"/>
+
+    <!-- Arms -->
+    <line x1="520" y1="310" x2="480" y2="280" stroke="#D4A574" stroke-width="8" stroke-linecap="round"/>
+    <line x1="580" y1="310" x2="620" y2="280" stroke="#D4A574" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Legs -->
+    <rect x="540" y="370" width="10" height="50" rx="5" fill="#3B2E5C"/>
+    <rect x="560" y="370" width="10" height="50" rx="5" fill="#3B2E5C"/>
+
+    <!-- Neon Color Palette Elements -->
+    <g class="neon-palette-1">
+        <circle cx="200" cy="200" r="25" fill="none" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow4)" opacity="0.8"/>
+        <circle cx="200" cy="200" r="18" fill="none" stroke="#00D9FF" stroke-width="1" filter="url(#neonGlow4)" opacity="0.6"/>
+        <circle cx="200" cy="200" r="10" fill="#1B6E3A" filter="url(#neonGlow3)" opacity="0.7"/>
+    </g>
+
+    <g class="neon-palette-2">
+        <rect x="640" y="350" width="50" height="50" rx="8" fill="none" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow4)" opacity="0.75"/>
+        <rect x="648" y="358" width="34" height="34" fill="#A8D5BA" opacity="0.5" filter="url(#neonGlow3)"/>
+    </g>
+
+    <g class="neon-palette-3">
+        <circle cx="150" cy="480" r="20" fill="none" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow4)" opacity="0.8"/>
+        <circle cx="150" cy="480" r="12" fill="none" stroke="#1B6E3A" stroke-width="1.5" filter="url(#neonGlow4)" opacity="0.65"/>
+        <circle cx="150" cy="480" r="6" fill="#00D9FF" filter="url(#neonGlow3)" opacity="0.8"/>
+    </g>
+
+    <!-- Design Lines/Shapes Floating -->
+    <g class="neon-shape-1">
+        <path d="M 100 150 Q 120 100 140 150 T 180 150" fill="none" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow4)" opacity="0.7"/>
+    </g>
+
+    <g class="neon-shape-2">
+        <polygon points="700,100 730,150 700,200 670,150" fill="none" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow4)" opacity="0.75"/>
+    </g>
+
+    <!-- Neon Dots -->
+    <circle cx="300" cy="450" r="2.5" fill="#1B6E3A" filter="url(#neonGlow4)" opacity="0.8"/>
+    <circle cx="350" cy="480" r="2" fill="#A8D5BA" filter="url(#neonGlow4)" opacity="0.7"/>
+    <circle cx="400" cy="510" r="2.5" fill="#00D9FF" filter="url(#neonGlow4)" opacity="0.75"/>
+    <circle cx="650" cy="200" r="2" fill="#1B6E3A" filter="url(#neonGlow4)" opacity="0.65"/>
+    <circle cx="700" cy="280" r="2.5" fill="#A8D5BA" filter="url(#neonGlow4)" opacity="0.7"/>
+
+    <style>
+        @keyframes neon-palette-1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(10px, -10px) rotate(5deg); }
+        }
+        @keyframes neon-palette-2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-12px, 8px); }
+        }
+        @keyframes neon-palette-3 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(15px, -12px); }
+        }
+        @keyframes neon-shape-1 {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        @keyframes neon-shape-2 {
+            0%, 100% { opacity: 0.65; }
+            50% { opacity: 0.95; }
+        }
+        .neon-palette-1 { animation: neon-palette-1 3.5s ease-in-out infinite; }
+        .neon-palette-2 { animation: neon-palette-2 4s ease-in-out infinite; }
+        .neon-palette-3 { animation: neon-palette-3 4.5s ease-in-out infinite; }
+        .neon-shape-1 { animation: neon-shape-1 2.5s ease-in-out infinite; }
+        .neon-shape-2 { animation: neon-shape-2 3s ease-in-out infinite; }
+    </style>
+</svg>

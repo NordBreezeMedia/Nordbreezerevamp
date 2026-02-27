@@ -1,0 +1,149 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="neonBg3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.06" />
+            <stop offset="100%" style="stop-color:#1B6E3A;stop-opacity:0.08" />
+        </linearGradient>
+        <filter id="neonGlow5">
+            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="neonGlow6">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#neonBg3)"/>
+
+    <!-- Animated Grid Background -->
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#1B6E3A" stroke-width="1" opacity="0.08"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#00D9FF" stroke-width="1" opacity="0.1"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#A8D5BA" stroke-width="1" opacity="0.08"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#1B6E3A" stroke-width="1" opacity="0.1"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="#00D9FF" stroke-width="1" opacity="0.08"/>
+
+    <!-- Large Neon Growth Chart -->
+    <g class="chart-container">
+        <!-- Chart Background -->
+        <rect x="150" y="120" width="500" height="280" rx="20" fill="#0F1419" stroke="#1B6E3A" stroke-width="3" filter="url(#neonGlow5)" opacity="0.9"/>
+
+        <!-- Chart Axes -->
+        <line x1="180" y1="350" x2="600" y2="350" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow6)" opacity="0.8"/>
+        <line x1="180" y1="350" x2="180" y2="150" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow6)" opacity="0.8"/>
+
+        <!-- Chart Grid Lines -->
+        <line x1="180" y1="290" x2="600" y2="290" stroke="#1B6E3A" stroke-width="1" filter="url(#neonGlow6)" opacity="0.4"/>
+        <line x1="180" y1="230" x2="600" y2="230" stroke="#1B6E3A" stroke-width="1" filter="url(#neonGlow6)" opacity="0.4"/>
+        <line x1="280" y1="150" x2="280" y2="350" stroke="#00D9FF" stroke-width="1" filter="url(#neonGlow6)" opacity="0.4"/>
+        <line x1="380" y1="150" x2="380" y2="350" stroke="#1B6E3A" stroke-width="1" filter="url(#neonGlow6)" opacity="0.4"/>
+        <line x1="480" y1="150" x2="480" y2="350" stroke="#00D9FF" stroke-width="1" filter="url(#neonGlow6)" opacity="0.4"/>
+
+        <!-- Growth Line Chart (Ascending) -->
+        <polyline points="200,300 280,260 360,220 440,170 520,140 580,160" fill="none" stroke="#1B6E3A" stroke-width="3" filter="url(#neonGlow5)" opacity="0.95"/>
+
+        <!-- Secondary trend line -->
+        <polyline points="200,320 280,300 360,270 440,240 520,220 580,210" fill="none" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow5)" opacity="0.75" stroke-dasharray="5,5"/>
+
+        <!-- Data Point Circles -->
+        <circle cx="200" cy="300" r="5" fill="#1B6E3A" filter="url(#neonGlow5)" opacity="0.9"/>
+        <circle cx="280" cy="260" r="5" fill="#1B6E3A" filter="url(#neonGlow5)" opacity="0.9"/>
+        <circle cx="360" cy="220" r="5" fill="#1B6E3A" filter="url(#neonGlow5)" opacity="0.9"/>
+        <circle cx="440" cy="170" r="5" fill="#1B6E3A" filter="url(#neonGlow5)" opacity="0.9"/>
+        <circle cx="520" cy="140" r="5" fill="#1B6E3A" filter="url(#neonGlow5)" opacity="0.9"/>
+        <circle cx="580" cy="160" r="5" fill="#1B6E3A" filter="url(#neonGlow5)" opacity="0.9"/>
+
+        <!-- Secondary data points -->
+        <circle cx="200" cy="320" r="4" fill="#00D9FF" filter="url(#neonGlow5)" opacity="0.8"/>
+        <circle cx="280" cy="300" r="4" fill="#00D9FF" filter="url(#neonGlow5)" opacity="0.8"/>
+        <circle cx="360" cy="270" r="4" fill="#00D9FF" filter="url(#neonGlow5)" opacity="0.8"/>
+        <circle cx="440" cy="240" r="4" fill="#00D9FF" filter="url(#neonGlow5)" opacity="0.8"/>
+
+        <!-- Axis Labels -->
+        <text x="580" y="375" font-family="monospace" font-size="12" fill="#A8D5BA" opacity="0.7" filter="url(#neonGlow6)">Time</text>
+        <text x="155" y="155" font-family="monospace" font-size="12" fill="#A8D5BA" opacity="0.7" filter="url(#neonGlow6)" transform="rotate(-90 155 155)">Growth</text>
+    </g>
+
+    <!-- Person pointing at chart -->
+    <!-- Body -->
+    <ellipse cx="100" cy="290" rx="28" ry="45" fill="#5B4B8A"/>
+
+    <!-- Head -->
+    <circle cx="100" cy="220" r="18" fill="#D4A574"/>
+
+    <!-- Pointing arm (animated) -->
+    <g class="analytics-point">
+        <line x1="128" y1="300" x2="240" y2="250" stroke="#D4A574" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="242" cy="248" r="4" fill="#D4A574" opacity="0.9"/>
+    </g>
+
+    <!-- Other arm -->
+    <line x1="72" y1="300" x2="50" y2="380" stroke="#D4A574" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Legs -->
+    <rect x="90" y="335" width="10" height="45" rx="5" fill="#3B2E5C"/>
+    <rect x="110" y="335" width="10" height="45" rx="5" fill="#3B2E5C"/>
+
+    <!-- Floating Analytics Indicators -->
+    <g class="metric-1">
+        <rect x="680" y="160" width="80" height="60" rx="8" fill="none" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow6)" opacity="0.8"/>
+        <text x="690" y="180" font-family="monospace" font-size="11" fill="#1B6E3A" opacity="0.8">+250%</text>
+        <line x1="695" y1="195" x2="755" y2="195" stroke="#A8D5BA" stroke-width="1.5" filter="url(#neonGlow6)" opacity="0.6"/>
+    </g>
+
+    <g class="metric-2">
+        <circle cx="700" cy="450" r="35" fill="none" stroke="#00D9FF" stroke-width="2" filter="url(#neonGlow6)" opacity="0.75"/>
+        <text x="685" y="460" font-family="monospace" font-size="14" fill="#00D9FF" opacity="0.9">98%</text>
+        <circle cx="700" cy="450" r="28" fill="none" stroke="#1B6E3A" stroke-width="1" filter="url(#neonGlow6)" opacity="0.5"/>
+    </g>
+
+    <!-- Neon Accent Shapes -->
+    <g class="accent-1">
+        <path d="M 300 500 L 330 530 L 300 560 L 270 530 Z" fill="none" stroke="#A8D5BA" stroke-width="2" filter="url(#neonGlow6)" opacity="0.7"/>
+    </g>
+
+    <g class="accent-2">
+        <rect x="500" y="480" width="60" height="60" rx="8" fill="none" stroke="#1B6E3A" stroke-width="2" filter="url(#neonGlow6)" opacity="0.65" transform="rotate(45 530 510)"/>
+    </g>
+
+    <!-- Floating particles -->
+    <circle cx="420" cy="80" r="2.5" fill="#1B6E3A" filter="url(#neonGlow6)" opacity="0.7"/>
+    <circle cx="550" cy="450" r="1.5" fill="#00D9FF" filter="url(#neonGlow6)" opacity="0.6"/>
+    <circle cx="250" cy="520" r="2" fill="#A8D5BA" filter="url(#neonGlow6)" opacity="0.65"/>
+    <circle cx="150" cy="100" r="1.5" fill="#1B6E3A" filter="url(#neonGlow6)" opacity="0.6"/>
+
+    <style>
+        @keyframes analytics-point {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        @keyframes metric-pulse-1 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(8px, -8px); }
+        }
+        @keyframes metric-pulse-2 {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes accent-float-1 {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(15deg); }
+        }
+        @keyframes accent-float-2 {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+        .analytics-point { animation: analytics-point 0.8s ease-in-out infinite; }
+        .metric-1 { animation: metric-pulse-1 3s ease-in-out infinite; }
+        .metric-2 { animation: metric-pulse-2 2.5s ease-in-out infinite; }
+        .accent-1 { animation: accent-float-1 4s ease-in-out infinite; }
+        .accent-2 { animation: accent-float-2 3.5s ease-in-out infinite; }
+    </style>
+</svg>

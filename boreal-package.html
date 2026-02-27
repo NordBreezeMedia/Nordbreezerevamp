@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite - Nord Breeze Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="NORDBREEZEMEDIA.png">
+    <style>
+        .package-hero {
+            background: linear-gradient(135deg, var(--breeze-green-light) 0%, var(--breeze-green) 100%);
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+        .package-hero h1 {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 800;
+            background: linear-gradient(90deg, #0A1A24 0%, #1A3A52 40%, #006994 70%, #0A1A24 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 6px 20px rgba(10, 26, 36, 0.25);
+            margin: 0;
+        }
+        .package-details {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .package-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+        .price-tag {
+            font-size: 3rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        .features-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+        }
+        .features-list i {
+            color: var(--success-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        .cta-box {
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="NORDBREEZEMEDIA.png" alt="Nord Breeze Media Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="packages.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="packages.html">Web Design Packages</a></li>
+                        <li><a href="seo-packages.html">SEO Packages</a></li>
+                        <li><a href="social-media-services.html">Social Media Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="index.html#contact">Connect With Us</a></li>
+            </ul>
+            <div id="google_translate_element" class="translate-widget"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Package Hero -->
+    <section class="package-hero">
+        <h1>Elite</h1>
+    </section>
+
+    <!-- Package Details -->
+    <section class="package-details">
+        <div class="package-card">
+            <div class="price-tag">Starting at $1,200</div>
+            
+            <h3 style="margin-top: 40px;">What's Included:</h3>
+            <ul class="features-list">
+                <li><i class="fas fa-check-circle"></i> Multi-page website</li>
+                <li><i class="fas fa-check-circle"></i> Up to 20-image gallery</li>
+                <li><i class="fas fa-check-circle"></i> Video background support</li>
+                <li><i class="fas fa-check-circle"></i> Flip-enabled photo galleries</li>
+                <li><i class="fas fa-check-circle"></i> Testimonial section</li>
+                <li><i class="fas fa-check-circle"></i> Advanced layout & styling</li>
+                <li><i class="fas fa-check-circle"></i> Fully responsive design</li>
+            </ul>
+
+            <div class="cta-box">
+                <a href="index.html#contact" class="btn btn-primary btn-large" style="margin-top: 20px;">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nord Breeze Media. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
